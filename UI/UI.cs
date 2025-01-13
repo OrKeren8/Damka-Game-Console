@@ -207,6 +207,11 @@ namespace UI
                     {
                         Console.WriteLine("Wrong selection, should be in format of ROWcol>ROWcol, please enter valid choice");
                     }
+                    else if (m_GameManager.CurrPlayer.r_IsPc)
+                    {
+                        m_GameManager.MovePiece((Move)"");
+                        isValidInput = true;
+                    }
                     else if (!m_GameManager.MovePiece((Move)currentPlayerMove))
                     {
                         Console.WriteLine("You are not allowed to go to this place, please try again");
